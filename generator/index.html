@@ -125,9 +125,7 @@
         return function(e) {
           var fileContent = e.target.result;
           var fileLines = fileContent.split('\n');
-
           generateTableAndAddToPage(fileLines);
-
           $("#spinner").hide();
         };
       })(inputFile);
@@ -138,6 +136,7 @@
 
 		// Handling selecting an existing card set
 		function handleCardSetSelection(event) {
+			$("#spinner").show();
 			var filename = $(event.target).val();
 			var fullpath = "../cards/" + filename;
 			$.ajax({
@@ -146,9 +145,11 @@
           success : function (data) {
           	var lines = data.split('\n');
           	generateTableAndAddToPage(lines);
+          	$("#spinner").hide();
           },
           error : function (data, textStatus, errorThrown) {
           	alert("Couldn't load the file");
+          	$("#spinner").hide();
           }
       });
 		}
