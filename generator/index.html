@@ -98,6 +98,20 @@
 			return tableHtml;
 		}
 
+		function generateTableAndAddToPage(fileLines) {
+			var tableHtml = generateTable(fileLines);
+
+      $('#list').html(tableHtml);
+
+      $('.textfill').textfill({ maxFontPixels: 24 });
+
+      if (COLOUR === 'white-on-black') {
+      	changeColourToWhiteOnBlack();
+      } if (COLOUR === 'black-on-white') {
+      	changeColourToBlackOnWhite();
+      }
+		}
+
 		// Handling the file upload
 		function handleFileSelection(event) {
 			$("#spinner").show();
@@ -111,17 +125,7 @@
           var fileContent = e.target.result;
           var fileLines = fileContent.split('\n');
 
-          var tableHtml = generateTable(fileLines);
-
-          $('#list').html(tableHtml);
-
-          $('.textfill').textfill({ maxFontPixels: 24 });
-
-          if (COLOUR === 'white-on-black') {
-          	changeColourToWhiteOnBlack();
-          } if (COLOUR === 'black-on-white') {
-          	changeColourToBlackOnWhite();
-          }
+          var tableHtml = generateTableAndAddToPage(fileLines);
 
           $("#spinner").hide();
         };
@@ -139,7 +143,7 @@
           url : fullpath,
           dataType: "text",
           success : function (data) {
-              alert(data);
+          	generateTableAndAddToPage(data);
           },
           error : function (data, textStatus, errorThrown) {
           	alert("Couldn't load the file");
