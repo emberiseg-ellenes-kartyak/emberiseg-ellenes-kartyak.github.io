@@ -52,6 +52,7 @@
 
 			// Skip the empty lines
 			fileLines = fileLines.filter(function pass(line) {
+				if (line === null) return false;
 				return line.trim() != "";
 			});
 
