@@ -144,8 +144,8 @@
           url : fullpath,
           dataType: "text",
           success : function (data) {
-          	alert(data);
-          	generateTableAndAddToPage(data);
+          	var lines = data.split('\n');
+          	generateTableAndAddToPage(lines);
           },
           error : function (data, textStatus, errorThrown) {
           	alert("Couldn't load the file");
