@@ -1,0 +1,83 @@
+html, body, table {
+	font-family: Arial, sans-serif;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.white-on-black {
+	background-color: #000;
+	color: #FFF;
+	border-color: #FFF;
+}
+
+.black-on-white {
+	background-color: #FFF;
+	color: #000;
+	border-color: #000;
+}
+
+/* A4 size; 21cm x 29.7cm */
+table {
+	border-collapse: separate;
+	border-spacing: 3px; /* 10 */
+	font-weight: bold;
+	font-size: 24px; /* 30 */
+	table-layout: fixed;
+	width: 21cm;
+	height: 29.7cm;
+	margin: 0;
+	padding: 0;
+	page-break-before: always;
+	page-break-after: always;
+	page-break-inside: avoid;
+}
+
+tr {
+}
+
+td {
+	/* height = 1.6767 * width */
+	/* width: 250px; */
+	/*
+	width: 232px;
+	height: 389px;
+	*/
+	/*
+	width: 100px;
+	height: 167px;
+	*/
+	width: 5cm;
+	height: 8.3835cm;
+	vertical-align: top;
+	border-width: 3px;
+	border-color: #000;
+	border-style: solid;
+	border-radius: 20px;
+	margin: 0;
+	padding: 20px;
+	overflow: hidden;
+}
+
+div#control-panel {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+
+	background-color: #DDD;
+	color: #000;
+}
+
+div#spinner {
+	width: 100%;
+	display: none;
+	text-align: center;
+}
+
+@media print {
+	.no-print, .no-print *
+    {
+        display: none !important;
+    }
+}
