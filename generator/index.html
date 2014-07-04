@@ -125,7 +125,7 @@
           var fileContent = e.target.result;
           var fileLines = fileContent.split('\n');
 
-          var tableHtml = generateTableAndAddToPage(fileLines);
+          generateTableAndAddToPage(fileLines);
 
           $("#spinner").hide();
         };
@@ -143,6 +143,7 @@
           url : fullpath,
           dataType: "text",
           success : function (data) {
+          	alert(data);
           	generateTableAndAddToPage(data);
           },
           error : function (data, textStatus, errorThrown) {
