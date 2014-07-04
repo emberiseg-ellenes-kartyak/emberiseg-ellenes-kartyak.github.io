@@ -15,8 +15,10 @@
 			Choose an existing set: ---select---
 			<select id="card-set-selector">
 				<option value="none">--- Choose a card set ---</option>
-			  <option value="hungarian/basic/magyar-feher.txt">Hungarian - Basic - White Cards</option>
-			  <option value="hungarian/basic/magyar-fekete.txt">Hungarian - Basic - Black Cards</option>
+				<option value="https://raw.githubusercontent.com/nodanaonlyzuul/against-humanity/master/answers.txt">English - White Cards</option>
+				<option value="https://raw.githubusercontent.com/nodanaonlyzuul/against-humanity/master/questions.txt">English - Black Cards</option>
+			  <option value="../cards/hungarian/basic/magyar-feher.txt">Hungarian - White Cards</option>
+			  <option value="../cards/hungarian/basic/magyar-fekete.txt">Hungarian - Black Cards</option>
 			  <option value="test/whitecards.txt">Test set</option>
 			</select>
 		</p>
@@ -138,7 +140,10 @@
 		function handleCardSetSelection(event) {
 			$("#spinner").show();
 			var filename = $(event.target).val();
-			var fullpath = "../cards/" + filename;
+			if (filename === 'none') {
+				return;
+			}
+			var fullpath = filename;
 			$.ajax({
           url : fullpath,
           dataType: "text",
