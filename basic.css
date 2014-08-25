@@ -1,25 +1,60 @@
 html {
 	font-family: Arial, sans-serif;
-	color: #444;
-	background-color: #FFF;
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	width: 600px;
-	height: 100%;
-	margin: 0 auto 0 auto;
-	padding: 50px 100px 50px 100px;
-	background-color: #FAFAFA;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
 	font-size: 48px;
-	color: #111;
 }
 
 h2 {
 	font-size: 36px;
-	color: #111;
+}
+
+h1, h2 {
+	color: #222;
+	text-shadow: 0px 1px 1px #DDD;
+}
+
+p {
+	font-size: 18px;
+	color: #222;
+	text-shadow: 0px 1px 1px #CCC;
+}
+
+div.text-section {
+	width: 100%;
+	min-height: 250px;
+	/*background-color: #FAFAFA;*/
+
+	background: rgb(209,209,209);
+	background: -moz-linear-gradient(-45deg,  rgba(209,209,209,1) 0%, rgba(163,163,163,1) 76%, rgba(68,68,68,1) 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(209,209,209,1)), color-stop(76%,rgba(163,163,163,1)), color-stop(100%,rgba(68,68,68,1)));
+	background: -webkit-linear-gradient(-45deg,  rgba(209,209,209,1) 0%,rgba(163,163,163,1) 76%,rgba(68,68,68,1) 100%);
+	background: -o-linear-gradient(-45deg,  rgba(209,209,209,1) 0%,rgba(163,163,163,1) 76%,rgba(68,68,68,1) 100%);
+	background: -ms-linear-gradient(-45deg,  rgba(209,209,209,1) 0%,rgba(163,163,163,1) 76%,rgba(68,68,68,1) 100%);
+	background: linear-gradient(135deg,  rgba(209,209,209,1) 0%,rgba(163,163,163,1) 76%,rgba(68,68,68,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#444444',GradientType=1 );
+}
+
+div.text-content {
+	width: 800px;
+	margin: 0 auto 0 auto;
+	padding: 50px 100px 50px 100px;
+}
+
+div.break-section {
+	width: 100%;
+	min-height: 300px;
+	background-color: #060606;
+}
+
+span.paragraph-header {
+	font-weight: bold;
 }
