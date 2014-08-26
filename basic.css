@@ -28,6 +28,26 @@ p {
 	text-shadow: 0px 1px 1px #CCC;
 }
 
+a:link {
+    color: #222;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #222;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #444;
+    text-decoration: none;
+}
+
+a:active {
+    color: #444;
+    text-decoration: none;
+}
+
 div.text-section {
 	width: 100%;
 	min-height: 250px;
@@ -43,16 +63,19 @@ div.text-section {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#444444',GradientType=1 );
 }
 
-div.text-content {
-	width: 800px;
-	margin: 0 auto 0 auto;
-	padding: 50px 100px 50px 100px;
-}
-
 div.break-section {
 	width: 100%;
 	min-height: 300px;
 	background-color: #060606;
+    background-image: url('resources/bg_black_orchid.png');
+    background-image: url('resources/bg_black_mamba.png');
+    background-image: url('resources/bg_black_paper.png');
+}
+
+div.section-content {
+    width: 800px;
+    margin: 0 auto 0 auto;
+    padding: 100px 100px 100px 100px;
 }
 
 span.paragraph-header {
@@ -60,14 +83,74 @@ span.paragraph-header {
 }
 
 
+/***
+  CARDS
+***/
+
+/* A4 size; 21cm x 29.7cm */
+table.cah {
+    border-collapse: separate;
+    border-spacing: 3px; /* 10 */
+    font-weight: bold;
+    font-size: 24px; /* 30 */
+    table-layout: fixed;
+    width: 800px;
+    /*
+    height: 265px;
+    */
+    margin: 0;
+    padding: 0;
+}
+
+tr.cah {
+}
+
+td.cah {
+    /* height = 1.6767 * width */
+    /* width: 250px; */
+    /*
+    width: 232px;
+    height: 389px;
+    */
+    /*
+    width: 100px;
+    height: 167px;
+    */
+    width: 25%;
+    height: 265px;
+    vertical-align: top;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 20px;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.white-on-black {
+    background-color: #000;
+    color: #FFF;
+    border-color: #FFF;
+}
+
+.black-on-white {
+    background-color: #FFF;
+    color: #000;
+    border-color: #000;
+}
+
+
+/***
+  BUTTONS
+***/
 
 div.card-download-buttons {
 	text-align: center;
 }
 
-button{
-		width: 25%;
-		margin: 0 5% 0 5%;
+button {
+	width: 25%;
+	margin: 0 5% 0 5%;
 
     display: inline-block;
     text-decoration: none;
