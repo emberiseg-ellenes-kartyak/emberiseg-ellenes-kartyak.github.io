@@ -105,7 +105,7 @@ table.cah {
 tr.cah {
 }
 
-td.cah {
+td.cah, button {
     /* height = 1.6767 * width */
     /* width: 250px; */
     /*
@@ -149,8 +149,48 @@ div.card-download-buttons {
 }
 
 button {
-	width: 25%;
+	width: 200px;
+    height: 265px;
 	margin: 0 5% 0 5%;
+
+    display: inline-block;
+    text-decoration: none;
+    font: bold 24px Arial;
+    padding: 24px 24px;
+
+    cursor: pointer;
+}
+
+button.card-download-button-white{
+    background: #FFF;
+    border-color: #000;
+    color: #000;
+}
+
+button.card-download-button-white:hover{
+    background: #DDD;
+}
+
+button.card-download-button-black{
+    background: #000;
+    border-color: #FFF;
+    color: #FFF; 
+}
+
+button.card-download-button-black:hover{
+    background: #222; 
+}
+
+
+
+/*
+iv.card-download-buttons {
+    text-align: center;
+}
+
+button {
+    width: 25%;
+    margin: 0 5% 0 5%;
 
     display: inline-block;
     text-decoration: none;
@@ -158,17 +198,12 @@ button {
     padding: 8px 11px;
     color: #555;
     border: 1px solid #dedede;
-    /*
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    */
 }
 
 button.card-download-button-white{
     background: #f5f5f5;
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f0f0f0'); /*  IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f0f0f0)); /*  WebKit */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f0f0f0'); 
+    background: -webkit-gradient(linear, left top, left bottom, from(#f9f9f9), to(#f0f0f0)); 
     background: -moz-linear-gradient(top,  #f9f9f9, #f0f0f0);
     border-color: #dedede #d8d8d8 #d3d3d3;
     color: #555;
@@ -180,8 +215,8 @@ button.card-download-button-white{
 
 button.card-download-button-white:hover{
     background: #f4f4f4;
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f8f8f8'); /*  IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f8f8f8)); /*  WebKit */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f8f8f8');
+    background: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#f8f8f8)); 
     background: -moz-linear-gradient(top,  #efefef, #f8f8f8);
     border-color: #c7c7c7 #c3c3c3 #bebebe;
     text-shadow: 0 1px 0 #fdfdfd;
@@ -192,8 +227,8 @@ button.card-download-button-white:hover{
 
 button.card-download-button-black{
     background: #525252;
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e5e5e', endColorstr='#434343'); /*  IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#5e5e5e), to(#434343)); /*  WebKit */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e5e5e', endColorstr='#434343');
+    background: -webkit-gradient(linear, left top, left bottom, from(#5e5e5e), to(#434343));
     background: -moz-linear-gradient(top,  #5e5e5e, #434343);
     border-color: #4c4c4c #313131 #1f1f1f;
     color: #fff;
@@ -211,3 +246,4 @@ button.card-download-button-black:hover{
     -moz-box-shadow: 0 1px 1px #b1b1b1, inset 0 1px 0 #838383;
     box-shadow: 0 1px 1px #b1b1b1, inset 0 1px 0 #838383;    
 }
+*/
