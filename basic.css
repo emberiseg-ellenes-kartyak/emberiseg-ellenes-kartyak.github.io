@@ -96,6 +96,10 @@ div.facebook-box {
     text-align: center;
 }
 
+.header-break-section div.facebook-box {
+    padding-top: 100px;
+}
+
 
 /***
   CARDS
