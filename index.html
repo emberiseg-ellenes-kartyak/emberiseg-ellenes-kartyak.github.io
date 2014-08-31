@@ -16,6 +16,17 @@
 </head>
 
 <body>
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
   <div class="break-section">
     <div class="section-content">
       <h1>Emberiség Ellenes Kártyák</h1>
@@ -273,11 +284,13 @@
     </div>
   </div>
 
-    <div class="break-section">
+  <div class="break-section">
     <div class="section-content">
+      <div class="fb-like-box" data-href="https://www.facebook.com/EmberisegEllenesKartyak" data-colorscheme="dark" data-show-faces="false" data-header="true" data-stream="false" data-show-border="true"></div>
     </div>
   </div>
 
+  <!-- Google Analytics -->
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
