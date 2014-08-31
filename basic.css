@@ -22,7 +22,7 @@ h1, h2 {
 	text-shadow: 0px 1px 1px #DDD;
 }
 
-div.break-section h1 {
+.header-break-section h1 {
     color: #FFF;
     text-shadow: 0px 1px 1px #222;
     padding-bottom: 50px;
@@ -76,6 +76,10 @@ div.break-section {
     background-image: url('resources/bg_black_orchid.png');
     background-image: url('resources/bg_black_mamba.png');
     background-image: url('resources/bg_black_paper.png');
+}
+
+div.header-break-section {
+    min-height: 100%;
 }
 
 div.section-content {
