@@ -100,6 +100,14 @@ div.facebook-box {
     padding-top: 50px;
 }
 
+div.break-section div.quotes p {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-weight: normal;
+    text-shadow: none;
+}
+
 
 /***
   CARDS
