@@ -57,7 +57,18 @@ function generateTableAndAddToPage(fileLines) {
 
     $('#list').html(tableHtml);
 
+    // Adjust font size to fit width
     $('.textfill').textfill({ maxFontPixels: 24 });
+
+    // Adjust font size to fit height
+    $('.textfill span').each(function () {
+        span = $(this);
+        while (271 < span.height()) {
+            console.log(span.height());
+            fontsize = parseInt(span.css("fontSize"));
+            span.css("fontSize", fontsize-1+"px");
+        }
+    });
 
     if (COLOUR === 'white-on-black') {
         changeColourToWhiteOnBlack();
