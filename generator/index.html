@@ -93,7 +93,8 @@
 
 			// Turn slash characters to slash-newlines
 			fileLines = $.map(fileLines, function transformLine(line) {
-				return line.replace(/\/\//g, "/<br />");
+				line = line.replace(/BLANK|___+/g, "________");
+				line = line.replace(/\/\//g, "/<br />");
 			});
 
 			var tableHtml = "";
