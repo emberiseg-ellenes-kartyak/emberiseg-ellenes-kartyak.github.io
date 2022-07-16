@@ -95,6 +95,7 @@
 			fileLines = $.map(fileLines, function transformLine(line) {
 				line = line.replace(/BLANK|___+/g, "________");
 				line = line.replace(/\/\//g, "/<br />");
+				return line;
 			});
 
 			var tableHtml = "";
