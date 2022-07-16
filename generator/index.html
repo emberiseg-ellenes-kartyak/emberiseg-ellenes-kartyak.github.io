@@ -41,7 +41,8 @@
 
 	<script>
 		$.get('set-list.txt', (data) => {
-			const lines = data.split(/\r?\n/g);
+			const lines = data.split(/\r?\n/g)
+				.filter(l => l !== "");
 			lines.sort((a, b) => {
 				if (a == b) {
 					return 0;
