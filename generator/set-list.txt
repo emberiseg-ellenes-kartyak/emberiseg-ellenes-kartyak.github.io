@@ -1,8 +1,8 @@
-../cards/hungarian/christmas-2014/karacsony-2014-feher.txt
-../cards/hungarian/christmas-2014/karacsony-2014-fekete.txt
-../cards/hungarian/basic/magyar-feher.txt
-../cards/hungarian/basic/magyar-fekete.txt
-../cards/hungarian/cah_magyarbyanonymous_pdf/black.txt
-../cards/hungarian/cah_magyarbyanonymous_pdf/white.txt
-../cards/test/whitecards.txt
-../cards/test/whitecards2.txt
+../cards/Hungarian/CAH_MagyarByAnonymous.pdf/White Cards.txt
+../cards/Hungarian/CAH_MagyarByAnonymous.pdf/Black Cards.txt
+../cards/Hungarian/White Cards.txt
+../cards/Hungarian/Xmas 2014/White Cards.txt
+../cards/Hungarian/Xmas 2014/Black Cards.txt
+../cards/Hungarian/Black Cards.txt
+../cards/Test set/White Cards (2).txt
+../cards/Test set/White Cards.txt
