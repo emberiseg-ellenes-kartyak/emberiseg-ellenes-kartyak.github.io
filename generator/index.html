@@ -51,24 +51,19 @@
 				a = a.split(/\//g);
 				b = b.split(/\//g);
 				
-				if (a.length !== b.length) {
-					return a.length - b.length;
-				}
-				
 				let i = 0;
 				while (i < a.length && i < b.length && a[i] == b[i]) {
 					i++;
 				}
+
+				if (i >= a.length - 1 || i >= b.length - 1) {
+					return a.length - b.length;
+				}
 				
 				a = a[i];
 				b = b[i];
-				
 				if (a == b) return 0;
-				//if (a.length !== b.length) {
-				//	return a.length - b.length;
-				//}
-				
-				return a[i] < b[i] ? -1 : 1;
+				return a < b ? -1 : 1;
 			});
 			for (const line of lines) {
 				const el = document.createElement('option');
