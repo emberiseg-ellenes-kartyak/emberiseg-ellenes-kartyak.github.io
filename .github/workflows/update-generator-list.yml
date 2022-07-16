@@ -1,0 +1,30 @@
+name: Update list of decks for the generator
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Generate list of sets
+        run: |
+          pushd generator
+          find ../cards -name '*.txt' >set-list.txt
+          popd
+          
+      - name: Commit if needed
+        uses: stefanzweifel/git-auto-commit-action@v4.14.1
+        with:
+          commit_message: Modify list of sets
