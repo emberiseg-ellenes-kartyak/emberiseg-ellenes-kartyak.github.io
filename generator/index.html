@@ -12,16 +12,9 @@
 
 	<div id="control-panel" class="no-print">
 		<p>
-			<b>1.a) Choose an existing set:</b> ---select---
-			<select id="card-set-selector">
-				<option value="none">--- Choose a card set ---</option>
-			  <option value="../cards/hungarian/basic/magyar-feher.txt">Hungarian - White Cards</option>
-			  <option value="../cards/hungarian/basic/magyar-fekete.txt">Hungarian - Black Cards</option>
-			  <option value="../cards/hungarian/christmas-2014/karacsony-2014-feher.txt">Hungarian - Xmas 2014 - White Cards</option>
-			  <option value="../cards/hungarian/christmas-2014/karacsony-2014-fekete.txt">Hungarian - Xmas 2014 - Black Cards</option>
-			  <option value="../cards/hungarian/cah_magyarbyanonymous_pdf/white.txt">CAH Magyar by Anonymous - White Cards</option>
-			  <option value="../cards/hungarian/cah_magyarbyanonymous_pdf/black.txt">CAH Magyar by Anonymous - Black Cards</option>
-			  <option value="test/whitecards.txt">Test set</option>
+			<b>1.a) Choose an existing set:</b>
+			<select id="card-set-selector" disabled>
+				<option id="card-set-selector-none" value="none">Loading...</option>
 			</select>
 		</p>
 		<p>
@@ -47,6 +40,17 @@
 	</div>
 
 	<script>
+		$.get('set-list.txt', (data) => {
+			for (const line of data.split('\n')) {
+				const el = document.createElement('option');
+				el.value = line;
+				el.innerText = line.replace(/^(..\/)*cards\//, '').replace(/\//g, ' - ').replace(/\.txt$/, '');
+				$('#card-set-selector').append(el);
+			}
+			$('#card-set-selector-none').text("--- Choose a card set ---");
+			$('#card-set-selector').removeAttr('disabled');
+		})
+
 		// Generating the CAH table
 		function generateTable(fileLines) {
 			var numberPerRow = 4;
