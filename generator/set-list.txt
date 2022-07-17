@@ -4,5 +4,3 @@
 ../cards/Hungarian/Xmas 2014/White Cards.txt
 ../cards/Hungarian/Xmas 2014/Black Cards.txt
 ../cards/Hungarian/Black Cards.txt
-../cards/Test set/White Cards (2).txt
-../cards/Test set/White Cards.txt
